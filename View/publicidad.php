@@ -6,7 +6,7 @@
                 src="https://s-media-cache-ak0.pinimg.com/originals/b7/78/df/b778df6c7a7ff76384f178792f408349.gif" 
                 alt="" class="img_ad" width="300" border="0"
                 >
-            <figcaption>EN CONSTRUCCI&Oacute;</figcaption>
+            <figcaption>EN CONSTRUCCI&Oacute;N</figcaption>
         </a>
     </figure>
 </aside>
