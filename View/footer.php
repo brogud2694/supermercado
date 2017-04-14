@@ -1,6 +1,6 @@
 
         <footer>
-            Ejemplo HTML5, CSS3, JAVASCRIPT
+            EN DESARROLLO
         </footer>
 
 

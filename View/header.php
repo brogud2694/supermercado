@@ -14,7 +14,7 @@
         <header>
             <h1>
                 <a href="index.php">
-                    <img class="fade" atl="Curso Lenguajes" src="View/img/logo.png"/>
+                    <img class="fade" atl="Supermercado" src="View/img/logo.png"/>
                 </a>
             </h1>
 
