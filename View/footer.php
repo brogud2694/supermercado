@@ -1,6 +1,6 @@
 
         <footer>
-            EN DESARROLLO
+            DESARROLLO
         </footer>
 
 
