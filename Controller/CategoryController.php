@@ -26,12 +26,15 @@ class CategoryController {
                     header("Location: index.php?Category");
                     exit;
                 }
-            } else if (isset($_GET['upd'])) {
+            } else if (isset($_GET['upd']) && isset($_GET['id']) && is_numeric($_GET['id'])) {
+                $id = $_GET['id'];
                 if ($_GET['upd'] === 'strUpd') {
-                    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-                        header("Location: index.php?Category&idUpd=" . $_GET['id']);
-                        exit;
-                    }
+                    header("Location: index.php?Category&idUpd=" . $id);
+                    exit;
+                } else if ($_GET['upd'] === 'doUpd') {
+                    $this->categoriaModel->actualizarCategoria($id, $_POST['updNameIN']);
+                    header("Location: index.php?Category");
+                    exit;
                 }
             } else if (isset($_GET['del']) && is_numeric($_GET['del'])) {
 

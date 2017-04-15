@@ -73,9 +73,9 @@ class CategoriaModel {
         sqlsrv_free_stmt($stmt);
     }
 
-    public function actualizarCategoria($categoria, $nombre) {
-        $sql = "UPDATE CATEGORIA SET NAME = ? WHERE idCategoria = ?";
-        $params = array($nombre, $categoria->getIdCategoria());
+    public function actualizarCategoria($idCategoria, $nuevoNombre) {
+        $sql = "UPDATE CATEGORIA SET NOMBRE = ? WHERE idCategoria = ?";
+        $params = array($nuevoNombre, $idCategoria);
         $stmt = sqlsrv_query($this->conn, $sql, $params);
         if ($stmt === false) {
             if (($errors = sqlsrv_errors() ) != null) {

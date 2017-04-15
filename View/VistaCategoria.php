@@ -12,11 +12,13 @@ include_once 'View/header.php';
     <?php
     if (isset($categorias)) {
         foreach ($categorias as $categoriaActual) {
-            if (isset($_GET['idUpd']) && $_GET['idUpd'] === $categoriaActual->getIdCategoria()) {
-                echo ("<tr><form action=?Category&upd=endUpd&id=" . $categoriaActual->getIdCategoria() . " method=post>");
+            echo ($categoriaActual->getIdCategoria());
+            if (isset($_GET['idUpd']) &&  $_GET['idUpd'] == $categoriaActual->getIdCategoria()) {
+                echo "asdfasdfasdf";
+                echo ("<tr><form action=?Category&upd=doUpd&id=" . $categoriaActual->getIdCategoria() . " method=post>");
                 echo ("<th>" . $categoriaActual->getIdCategoria() . "</th>");
-                echo ("<td><input type=text name=updNameIN id=updNameIN value=" . $categoriaActual->getNombre() . "required/></td>");
-                echo ("<td><input type=submi name=updBTN id=updBTN Value=Actualizar/></td>");
+                echo ("<td><input type=text name=updNameIN id=updNameIN value='" . $categoriaActual->getNombre() . "' required/></td>");
+                echo ("<td><input type=submit name=updBTN id=updBTN Value=Actualizar/></td>");
                 echo ("<td><a href=index.php?Category&upd=cancel>Cancelar</a></td>");
                 echo ("</form></tr>");
             } else {
