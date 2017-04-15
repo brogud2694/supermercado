@@ -23,7 +23,11 @@ class DefaultController {
 //CONSTRUCTOR
 
     public function invoke() {
-        if (isset($_GET['formularioArticulo'])) {
+
+        if (isset($_GET['obtenerCategorias'])) {
+            $categorias = $this->categoriaModel->obtenerCategorias();
+            include 'View/MostrarCategorias.php';
+        } else if (isset($_GET['formularioArticulo'])) {
             $respuesta = "";
             if ($_GET['formularioArticulo'] == "insertar") {
                 $categorias = $this->unirCategorias();
@@ -35,7 +39,9 @@ class DefaultController {
                 } else {
                     $respuesta = "no insertado";
                 }
-            }//IF
+            } else {
+                
+            }
 
             $array_categorias = $this->categoriaModel->obtenerCategorias();
             $array_unidades = $this->unidadModel->obtenerUnidades();

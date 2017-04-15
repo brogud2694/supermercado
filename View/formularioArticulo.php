@@ -35,6 +35,8 @@ include_once 'View/header.php';
                 <?php
                 echo '<label>Categorías: </label>';
                 if (isset($array_categorias)) {
+                    var_dump($array_categorias);
+                    print_r($array_categorias);
                     foreach ($array_categorias as $valorActual) {
                          echo '<input type="checkbox" name="categorias[]" value='.$valorActual[0].'>'.$valorActual[0].'</input>';
                     }

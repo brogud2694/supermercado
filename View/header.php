@@ -21,6 +21,7 @@
             <nav>
                 <ul>
                     <li><a href="index.php">Inicio</a></li>
+                    <li><a href="?Category">Categorias</a></li>
                     <li><a href="?formularioArticulo">Nuevo articulo</a></li>
                 </ul>
             </nav>
